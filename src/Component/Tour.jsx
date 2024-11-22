@@ -4,10 +4,10 @@ import Card from "./Card";
 function Tour({ state, remove }) {
   return (
     <div>
-      <div className="d-flex flex-row align-items-center">
+      <div className="d-flex flex-row align-items-center justify-content-center">
         <img
           alt="img"
-          className="w-50 h-25"
+          className="w-25 h-25"
           src="https://i.pinimg.com/originals/bc/8e/76/bc8e764bece45d88dfb31c6fcabca83a.png"
         />
         <h1 className="" style={{ fontFamily: "cursive" }}>
