@@ -4,18 +4,17 @@ import Card from "./Card";
 function Tour({ state, remove }) {
   return (
     <div>
-      <h1
-        style={{
-          fontFamily: "sans-serif",
-          letterSpacing: "10px",
-          fontSize: "50px",
-          textDecoration: "underline",
-          padding: "20px",
-        }}
-      >
-        Tour & Travel
-      </h1>
-
+      <div className="d-flex flex-row align-items-center">
+        <img
+          alt="img"
+          className="w-50 h-25"
+          src="https://i.pinimg.com/originals/bc/8e/76/bc8e764bece45d88dfb31c6fcabca83a.png"
+        />
+        <h1 className="" style={{ fontFamily: "cursive" }}>
+          {" "}
+          Tour & Travel
+        </h1>
+      </div>
       <div
         style={{
           display: "flex",

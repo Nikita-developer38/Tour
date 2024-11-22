@@ -1,8 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Card({ id, info, name, price, image, remove }) {
   const [read, setRead] = useState(false);
   const description = read ? info : info.slice(0, 100) + "...";
+  const navigate = useNavigate();
+  const Checkout = () => {
+    navigate("/form", {
+      state: {
+        name: name,
+        price: price,
+        image: image,
+      },
+    });
+  };
   return (
     <div
       style={{
@@ -23,8 +34,13 @@ function Card({ id, info, name, price, image, remove }) {
             " 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
         }}
       >
-        <h2>{name}</h2>
-        <img alt="img" style={{ width: "100%", height: "200px" }} src={image} />
+        <h2>{name}</h2>{" "}
+        <img
+          alt="img"
+          onClick={Checkout}
+          style={{ width: "100%", height: "200px" }}
+          src={image}
+        />
         <p
           style={{
             textAlign: "justify",
